@@ -16,7 +16,7 @@ export const Mascot: React.FC<MascotProps> = ({
   // Dimensions based on size
   const dimensions = {
     sm: 'w-12 h-12',
-    md: 'w-24 h-24',
+    md: 'w-[95px] h-[95px]',
     lg: 'w-40 h-40',
     xl: 'w-56 h-56'
   };
