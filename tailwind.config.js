@@ -21,7 +21,17 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['"Sarabun"', '"Noto Sans Thai"', 'sans-serif'],
+        sans: [
+          '"TH Sarabun IT๙"',
+          '"THSarabunIT9"',
+          '"TH Sarabun New"',
+          '"THSarabunNew"',
+          '"TH Sarabun PSK"',
+          '"THSarabunPSK"',
+          '"Sarabun"',
+          '"Noto Sans Thai"',
+          'sans-serif'
+        ],
       }
     },
   },

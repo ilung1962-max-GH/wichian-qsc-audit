@@ -5,9 +5,13 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    font-size: 140%; /* Scale all text in the application to 140% */
+  }
   body {
     @apply bg-brand-cream text-brand-dark min-h-screen font-sans;
     background-color: #F5F1E8;
+    font-family: "TH Sarabun IT๙", "THSarabunIT9", "TH Sarabun New", "THSarabunNew", "TH Sarabun PSK", "THSarabunPSK", "Sarabun", "Noto Sans Thai", sans-serif;
   }
 }
 

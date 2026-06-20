@@ -10,7 +10,7 @@ export class QscAuditDatabase extends Dexie {
   capaItems!: Table<CAPAItem>;
 
   constructor() {
-    super('QscAuditDatabase');
+    super('QscAuditDatabaseV2');
     this.version(1).stores({
       stores: 'id, name, type, active',
       auditors: 'id, name, type, active',
