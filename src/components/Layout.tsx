@@ -205,9 +205,22 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
           </nav>
 
           {/* Footer branding */}
-          <div className="text-[10px] text-gray-400 text-center mt-auto pt-4 border-t border-brand-green/5">
-            มาตรฐานการปฏิบัติการ DBD 2569<br />
-            เวอร์ชัน 1.0.0 (Demo Mode)
+          <div className="text-[10px] text-gray-400 text-center mt-auto pt-4 border-t border-brand-green/5 space-y-2">
+            <button
+              onClick={async () => {
+                if (window.confirm('คุณต้องการรีเซ็ตข้อมูลตัวอย่างทั้งหมดเป็นค่าตั้งต้นใช่หรือไม่? ข้อมูลการแก้ไขและการตรวจใหม่จะถูกล้างออกทั้งหมด')) {
+                  await useSystemStore.getState().resetDatabase();
+                  alert('รีเซ็ตข้อมูลระบบเป็นค่าตั้งต้นเรียบร้อยแล้ว!');
+                }
+              }}
+              className="w-full py-1 px-2 border border-brand-red/35 hover:bg-brand-red/10 text-brand-red font-bold rounded-lg transition-all"
+            >
+              🔄 รีเซ็ตข้อมูลจำลองระบบ
+            </button>
+            <div>
+              มาตรฐานการปฏิบัติการ DBD 2569<br />
+              เวอร์ชัน 1.0.0 (Demo Mode)
+            </div>
           </div>
         </aside>
 
@@ -262,8 +275,22 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 })}
               </nav>
               
-              <div className="text-[10px] text-gray-400 text-center mt-auto pt-4 border-t border-brand-green/5">
-                มาตรฐาน DBD 2569 · ภาษาไทย 100%
+              <div className="text-[10px] text-gray-400 text-center mt-auto pt-4 border-t border-brand-green/5 space-y-2">
+                <button
+                  onClick={async () => {
+                    if (window.confirm('คุณต้องการรีเซ็ตข้อมูลตัวอย่างทั้งหมดเป็นค่าตั้งต้นใช่หรือไม่? ข้อมูลการแก้ไขและการตรวจใหม่จะถูกล้างออกทั้งหมด')) {
+                      await useSystemStore.getState().resetDatabase();
+                      alert('รีเซ็ตข้อมูลระบบเป็นค่าตั้งต้นเรียบร้อยแล้ว!');
+                      setIsSidebarOpenMobile(false);
+                    }
+                  }}
+                  className="w-full py-1 px-2 border border-brand-red/35 hover:bg-brand-red/10 text-brand-red font-bold rounded-lg transition-all"
+                >
+                  🔄 รีเซ็ตข้อมูลจำลอง
+                </button>
+                <div>
+                  มาตรฐาน DBD 2569 · ภาษาไทย 100%
+                </div>
               </div>
             </aside>
           </>

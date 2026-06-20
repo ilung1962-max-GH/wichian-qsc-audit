@@ -45,6 +45,7 @@ interface SystemState {
   // CAPA / RCA actions
   submitRCA: (capaId: string, rca: { correction: string; rootCause: string; preventiveAction: string }) => Promise<void>;
   verifyCAPA: (capaId: string, verifierId: string, notes: string, afterPhoto: string) => Promise<void>;
+  resetDatabase: () => Promise<void>;
 }
 
 export const useSystemStore = create<SystemState>((set) => ({
@@ -91,6 +92,37 @@ export const useSystemStore = create<SystemState>((set) => ({
     // Sort plans by date descending
     auditPlans.sort((a, b) => b.scheduledDate.localeCompare(a.scheduledDate));
     // Sort results by date descending
+    auditResults.sort((a, b) => b.auditDate.localeCompare(a.auditDate));
+
+    set({
+      stores,
+      auditors,
+      auditPlans,
+      auditResults,
+      capaItems,
+      isLoading: false
+    });
+  },
+
+  resetDatabase: async () => {
+    set({ isLoading: true });
+    await db.stores.clear();
+    await db.auditors.clear();
+    await db.auditPlans.clear();
+    await db.auditResults.clear();
+    await db.capaItems.clear();
+    
+    // Seed database again
+    await seedDatabase();
+    
+    // Reload
+    const stores = await db.stores.toArray();
+    const auditors = await db.auditors.toArray();
+    const auditPlans = await db.auditPlans.toArray();
+    const auditResults = await db.auditResults.toArray();
+    const capaItems = await db.capaItems.toArray();
+
+    auditPlans.sort((a, b) => b.scheduledDate.localeCompare(a.scheduledDate));
     auditResults.sort((a, b) => b.auditDate.localeCompare(a.auditDate));
 
     set({

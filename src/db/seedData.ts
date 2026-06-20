@@ -435,13 +435,13 @@ export const getMysteryChecklist = (): AuditCategory[] => [
 
 // Placeholder for base64 images (before/after photos)
 export const mockImages = {
-  dirtyFloor: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==',
-  dirtyEquipment: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==',
-  badSign: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJAfjtfhAAAAABJRU5ErkJggg==',
-  dirtyCounter: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z/CfoR4ADwICQHz+e/kAAAAABJRU5ErkJggg==',
-  cleanFloor: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNgeM9QDwADhgGAWjR9awAAAABJRU5ErkJggg==',
-  cleanEquipment: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNgeM9QDwADhgGAWjR9awAAAABJRU5ErkJggg==',
-  fixedSign: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNgeM9QDwADhgGAWjR9awAAAABJRU5ErkJggg=='
+  dirtyFloor: '/dirty_floor.png',
+  dirtyEquipment: '/dirty_steamer.png',
+  badSign: '/dirty_sign.png',
+  dirtyCounter: '/dirty_counter.png',
+  cleanFloor: '/clean_floor.png',
+  cleanEquipment: '/clean_steamer.png',
+  fixedSign: '/clean_sign.png'
 };
 
 // Complete mock AuditPlans, AuditResults, and CAPAItems
