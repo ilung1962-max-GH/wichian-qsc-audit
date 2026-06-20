@@ -90,6 +90,18 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
             <span className="text-[10px] text-brand-pink font-medium">Smart QSC Audit System</span>
           </div>
         </div>
+        
+        {/* Centered Project Title (Desktop/Tablet Banner) */}
+        <div className="hidden md:flex flex-col items-center justify-center text-center px-4 flex-1">
+          <div className="bg-brand-dark/20 border border-white/10 rounded-2xl px-6 py-1.5 shadow-inner">
+            <h1 className="font-extrabold text-sm lg:text-base tracking-wider text-brand-gold uppercase">
+              SMART Franchise System Audit
+            </h1>
+            <p className="text-[10px] lg:text-[11px] text-brand-cream/90 font-medium tracking-wide">
+              and Mystery Shopper Audit System
+            </p>
+          </div>
+        </div>
 
         {/* Right side: Role Switcher & User Selection */}
         <div className="flex items-center gap-2">
