@@ -192,7 +192,7 @@ export const DashboardView: React.FC = () => {
       
       {/* Welcome Board with Mascot */}
       <div className="bg-white p-5 rounded-3xl border border-brand-green/10 shadow-sm flex flex-col md:flex-row items-center gap-5">
-        <Mascot size="lg" message={getMascotMessage()} className="shrink-0" />
+        <Mascot size="md" message={getMascotMessage()} className="shrink-0" />
         <div className="flex-1 space-y-2 text-center md:text-left">
           <h2 className="text-xl sm:text-2xl font-black text-brand-green">
             {userRole === 'hq' && 'แผงควบคุมหลักผู้บริหารแฟรนไชส์ซอร์'}

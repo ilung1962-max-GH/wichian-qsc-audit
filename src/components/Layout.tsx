@@ -176,8 +176,8 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
         {/* Desktop Sidebar */}
         <aside className="hidden lg:flex flex-col w-64 bg-white border-r border-brand-green/10 p-4 shrink-0 shadow-sm">
           {/* Brand header */}
-          <div className="mb-6 p-2 flex flex-col items-center border-b border-brand-green/5">
-            <img src="/logo-wichian.svg" alt="วิเชียรซาลาเปา" className="h-16 object-contain mb-2" />
+          <div className="mb-4 p-2 flex flex-col items-center border-b border-brand-green/5">
+            <img src="/logo-wichian.svg" alt="วิเชียรซาลาเปา" className="h-28 object-contain mb-2" />
             <div className="px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase bg-brand-green/10 text-brand-green mt-1">
               {userRole === 'hq' ? 'HEADQUARTERS' : userRole === 'auditor' ? 'AUDITOR APP' : 'FRANCHISEE PORTAL'}
             </div>
@@ -245,7 +245,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
               </div>
 
               <div className="mb-4 flex flex-col items-center">
-                <img src="/logo-wichian.svg" alt="วิเชียรซาลาเปา" className="h-14 object-contain mb-1" />
+                <img src="/logo-wichian.svg" alt="วิเชียรซาลาเปา" className="h-20 object-contain mb-1" />
                 <span className="text-xs text-brand-gold font-bold bg-brand-green/5 px-2 py-0.5 rounded">
                   {getRoleLabel(userRole)}
                 </span>
