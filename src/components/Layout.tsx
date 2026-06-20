@@ -81,7 +81,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
           </button>
           
           {/* Logo icon */}
-          <div className="w-9 h-9 bg-white rounded-lg p-0.5 flex items-center justify-center shadow-inner">
+          <div className="w-[72px] h-[72px] bg-white rounded-xl p-1 flex items-center justify-center shadow-inner">
             <img src="/logo-icon.svg" alt="Wichian Mascot" className="w-full h-full" />
           </div>
           
